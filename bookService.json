@@ -1,0 +1,22 @@
+[
+    { "bookName" : "Java",
+	  "price" : 1000,
+	  "author" : "John"
+	},{
+	  "bookName" : "Angular",
+	  "price" : 1500,
+	  "author" : "Dev"
+	},{
+	  "bookName" : "JavaScript",
+	  "price" : 500,
+	  "author" : "David"
+	},{
+	  "bookName" : "Cpp",
+	  "price" : 300,
+	  "author" : "Rock"
+	},{
+	  "bookName" : "Linux",
+	  "price" : 100,
+	  "author" : "Albert"
+	}
+]

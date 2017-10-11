@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book Shelf</title>
+</head>
+<!-- CSS Files -->
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="bootstrap.css">
+
+<body ng-app="bookStore" ng-controller="indexController">
+   
+<nav class="navbar navbar-default" style="border: 1px solid skyblue;">
+  <div class="row">  
+    <div class="navbar-brand col-sm-4"><a href="#"><h1>Book Shelf</h1></a></div>
+   
+    <div class="nav navbar-nav col-sm-4" style="margin-top:10px;">
+    <hr>
+        <input type="text" placeholder="Search Here" class="form-control" ng-model="userSearch">
+    </div>
+     
+    </div>
+  </div>
+</nav>
+
+    <div id="item" ng-repeat="item in bookList | filter:userSearch " style="margin-top:5%; margin-left:10%;">
+        <div class="row">
+            <div class="col-5">
+                <img src="images/{{item.bookName}}.jpg"/>
+            </div>
+            <div class="col-7" style="text-align:center;">
+                <div class="name" style="color:whitesmoke;font-size: 20px;font-weight:bold;background-color: rgba(0, 0, 0, 0);">{{item.bookName}}</div>
+                <div class="text" ng-show="showDetails"">
+                    <strong>Price : {{item.price}}Rs</strong>
+                    <br>
+                    <strong>Author : {{item.author}}</strong>
+                    <hr>
+                    <button class="btn btn-primary" ng-click="showDetails = false">Hide</button>
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-warning" ng-hide="showDetails" ng-click="showDetails = true">Details</button>
+                    <button class="btn btn-danger" ng-click="addToCart(item)" ng-hide="showDetails">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- JavaScript Files -->
+<script src="angular.js"></script>
+<script src="indexController.js"></script>
+<script src="bookService.json"></script>
+
+</html>

@@ -1,0 +1,59 @@
+body{
+    background-image: url("images/back.jpg");
+}
+    #item{
+        float :left;
+        border: 1px solid skyblue;
+        width: 300px;
+        background-color: white;
+
+        /*margin-left: 50px;
+        margin-bottom: 30px;
+        display: inline-block;*/
+    }
+    .header{
+        border:1px solid black;
+        
+    }
+    span {
+        font-size: 30px;
+    }
+    img{
+        width: 130px;
+        height: 170px; 
+        padding-left:10px;
+        padding-top:10px;
+    }
+    .buttons{
+        padding-top: 10px;.
+        /*top: 14px;
+        position: relative;*/
+    }
+    .bookDetails{
+    float : left;
+    }
+    .text{
+        font-size: 14px;
+        margin-right: 25px;
+        margin-top: 8px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #item {
+            margin-left: 100px;
+        }
+
+    }
+     @media screen and (max-width: 320px) {
+        #item {
+            margin-left: 50px;
+        }
+
+    }
+
+@media screen and (max-width: 618px) {
+        #item {
+            margin-left: 118px;
+        }
+
+    }
