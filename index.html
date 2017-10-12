@@ -29,7 +29,7 @@
     <div id="item" ng-repeat="item in bookList | filter:userSearch " style="margin-top:5%; margin-left:10%;">
         <div class="row">
             <div class="col-5">
-                <img src="images/{{item.bookName}}.jpg"/>
+                <img ng-src="images/{{item.bookName}}.jpg"/>
             </div>
             <div class="col-7" style="text-align:center;">
                 <div class="name" style="color:whitesmoke;font-size: 20px;font-weight:bold;background-color: rgba(0, 0, 0, 0);">{{item.bookName}}</div>
@@ -52,6 +52,5 @@
 <!-- JavaScript Files -->
 <script src="angular.js"></script>
 <script src="indexController.js"></script>
-<script src="bookService.json"></script>
 
 </html>
